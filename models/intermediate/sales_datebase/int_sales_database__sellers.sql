@@ -22,4 +22,3 @@ SELECT sta.staff_id,
 FROM {{ ref ('stg_sales_database__staffs')}} AS sta
 LEFT JOIN staff_sellout_summary AS sss ON  sta.staff_id = sss.staff_id
 LEFT JOIN {{ ref ('stg_sales_database__stores')}} AS sto ON  sta.store_id = sto.store_id
-
