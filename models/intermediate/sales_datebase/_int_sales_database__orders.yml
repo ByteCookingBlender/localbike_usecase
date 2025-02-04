@@ -4,7 +4,7 @@ models:
   - name: int_sales_database__orders
     description: '{{ doc("int_sales_database__orders") }}'
     columns:
-      - name: order_id
+      - name: order_product_id
         description: "Primary key, unique identifier for each order."
         tests:
           - unique
