@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_sales_database__sellers
+    description: '{{ doc("int_sales_database__sellers") }}'
+    columns:
+      - name: staff_id
+        description: "Primary key, unique identifier for each staff member."
+        tests:
+          - unique
+          - not_null
