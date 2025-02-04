@@ -9,7 +9,8 @@ FROM {{ref ('stg_sales_database__order_items')}}
 GROUP BY order_id, product_id
 )
 
-SELECT o.order_id,
+SELECT CONCAT(o.order_id, '_', oi.product_id) AS order_product_id,
+  o.order_id,
   o.customer_id,
   o.store_id,
   o.staff_id,
